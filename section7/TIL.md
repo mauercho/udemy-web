@@ -181,6 +181,12 @@ h1,h2 {
 - 브라우저에서 여러 css 미리 적용해 볼 수 도 있음.
 - 인라인 스타일이 우선순위가 높긴 하는데 안씀.
 - !important 도 있는데 이거는 개별 스타일 지정에 사용할 수 있는 선택자임. 이게 원탑. 자동으로 최우선
+```css
+button {
+    background-color: magenta !important;
+}
+```
+
 
 ## CSS 상속
 

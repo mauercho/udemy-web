@@ -420,7 +420,7 @@
 </form>
 
 - select 가 상위요소로 있어야 함. label 하려면 select 에 name과 id를 넣어야 함.
-- 제출하면 mael=steak 이런 식으로 됨.
+- 제출하면 meal=steak 이런 식으로 됨.
 - option 속성을 selected 로 하면 미리 설정 되어 있게 할 수 있음.
 
 ## 범위

@@ -28,7 +28,7 @@
 ## align-items
 - 교차축을 따라 아이템을 배열함. justify-content은 주축을 따름.
 - default는 align-items: flex-start;
-- flex-end, centeer 등 있음.
+- flex-end, center 등 있음.
 - baseline도 있는데 안에 텍스트가 있을 경우 텍스트에 맞춰서 정렬됨,
 - wrap-reverse는 교차축 거꾸로 하기 때문에 같이 쓰면 여러 조합 가능
 

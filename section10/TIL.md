@@ -11,21 +11,25 @@
 - flex-direction을 row, row-reverse, column, column-reverse 다양하게 줄 수 있음.
 
 ## justify-content
+
 - 본축을 기준으로 요소와 콘텐츠를 어떻게 배치할지 결정하는 속성임.
 - 따라서 flex-direction 이 어떻게 되어있는지에 따라 가로로 적용될지 세로로 적용될지 알 수 있음.
-- default는 flex-direction: flex-start;
+- default는 justify-content: flex-start;
 - center 는 중앙
 - space-between: 바깥쪽 여백 다 없애고 요소 사이에 간격 띄움.
 - space-around: 요소마다 여백 생김. 근데 양쪽 바깥만 균등하지 않음. 요소 사이는 2가 있다면 끝 요소와 끝 사이에는 1의 여백
 - space-evenly: 이거 쓰면 전체가 균등
 
 ## Flex-wrap
+
 - wrap, nowrap, wrap-reverse 쓸 수 있음.
 - nowrap 상태면 1000 px 짜리 컨테이너에 400px 짜리 박스 5개가 들어가면 박스가 꾸겨져서 들어감.
 - wrap을 주면 박스 크기는 유지된 채로 다음 박스가 교차축에 따라 나타남.
-- reverse 를 주면 교차축을 거꾸로 하는 거임. ex) flex-direction: row 면 교차축은 위에서 아래인데 flex-wrap:reverse; 주면 아래에서 위로 설정되어서 나옴,
+- reverse 를 주면 교차축을 거꾸로 하는 거임. ex) flex-direction: row 면 교차축은 위에서 아래인데 flex-wrap:reverse; 주면 아래에서 위로 설정되어서 나옴.
+- wrap은 교차축의 방향을 결정한다고 보면 됨.
 
 ## align-items
+
 - 교차축을 따라 아이템을 배열함. justify-content은 주축을 따름.
 - default는 align-items: flex-start;
 - flex-end, center 등 있음.
@@ -33,21 +37,24 @@
 - wrap-reverse는 교차축 거꾸로 하기 때문에 같이 쓰면 여러 조합 가능
 
 ## align-content
+
 - 행이나 열이 여러개일때 교차축을 기준으로 정렬함.
 - flex-wrap을 wrap으로 해야함.
 - center flex-start flex-end space-between 등 다 적용 가능
 
 ## align-self
+
 - 단일 요소에 사용하거나 플렉스 컨테이너에서 두 개 요소에 개별로 사용함.
 
 ```css
 div:nth-of-type(1) {
-  align-self:center;
+  align-self: center;
 }
 div:nth-of-type(5) {
-  align-self:flex-end;
+  align-self: flex-end;
 }
 ```
+
 - 이런 식으로 줄 수 있음. 유연성 부여.
 
 ## flex-basis, grow & shrink
@@ -72,62 +79,66 @@ div:nth-of-type(5) {
 ## 미디어 쿼리의 능력
 
 ```css
-@media (max-width: 1500px){
-    h1 {
-        color: yellow;
-    }
+@media (max-width: 1500px) {
+  h1 {
+    color: yellow;
+  }
 }
 ```
+
 - 이런 식으로 주는거임. 괄호 안에 max-width 또는 min-width 를 써줘서 최소 길이 일때 최대 길이 일때를 써줄 수 있음.
 
 ```css
-@media (min-width: 600px) and (max-width: 800px){
-    h1 {
-        color: purple;
-    }
+@media (min-width: 600px) and (max-width: 800px) {
+  h1 {
+    color: purple;
+  }
 }
 ```
+
 - and를 써줄 수 도 있음.
 
 ```css
-@media (max-width: 500px){
-    h1 {
-        color: red;
-    }
+@media (max-width: 500px) {
+  h1 {
+    color: red;
+  }
 }
-@media (max-width: 1000px){
-    h1 {
-        color: orange;
-    }
+@media (max-width: 1000px) {
+  h1 {
+    color: orange;
+  }
 }
 ```
+
 - 위의 방식처럼쓰면 뒤에 orange가 있고 1000px까지 orange기 때문에 빨간색 안나오고 계속 orange색 나올거임.
 
 ```css
-@media (min-width: 500px){
-    h1 {
-        color: orange;
-    }
+@media (min-width: 500px) {
+  h1 {
+    color: orange;
+  }
 }
-@media (min-width: 1000px){
-    h1 {
-        color: yellow;
-    }
+@media (min-width: 1000px) {
+  h1 {
+    color: yellow;
+  }
 }
-@media (min-width: 1500px){
-    h1 {
-        color: green;
-    }
+@media (min-width: 1500px) {
+  h1 {
+    color: green;
+  }
 }
 ```
+
 - 보통 위의 방식으로 씀.
 
 ```css
- @media (orientation: landscape) {
- body {
-     background-color: magenta;
- }
+@media (orientation: landscape) {
+  body {
+    background-color: magenta;
+  }
 }
 ```
-- 이런 식으로 쓰면 화면 가로 방향일 때 배경색 바뀜.
 
+- 이런 식으로 쓰면 화면 가로 방향일 때 배경색 바뀜.

@@ -23,7 +23,7 @@
   - indexOf(): 문자열이나 비슷한데 배열의 요소를 봐줌
   - reverse(): 원본 배열을 뒤집음. comboParty.reverse();
   - slice(): 배열의 일부를 복사하는 방법. 시작점과 끝점 인수 받음. 시작점만 적으면 그 부분부터 끝까지. let warmColors = colors.slice(0, 3); 인수로 음수도 받음. 원래 배열은 안 바뀜.
-  - splice(): 기존 요소 제거하거나 대체하거나 새로운 요소들을 추가해서 배열의 내용을 변경함. 원본 배열 바뀜. colors.splice(1, 1) -> 1번째 인덱스부터 한개 제거. colors.splice(2, 0, 'red'); -> 2번째 인덱스부터 제거하지 말고 red 추가. colors.splice(3,0,'yellow-green','forestgreen'); 이렇게도 가능 colors.splice(2,2,'DELETED'); -> 2번째부터 2개 지우고 DELETED 추가
+  - splice(): 기존 요소 제거하거나 대체하거나 새로운 요소들을 추가해서 배열의 내용을 변경함. 원본 배열 바뀜. colors.splice(1, 1) -> 1번째 인덱스부터 한개 제거. colors.splice(2, 0, 'red'); -> 2번째 인덱스부터 제거하지 말고 red 추가. colors.splice(3,0,'yellow-green','forestgreen'); 이렇게도 가능 colors.splice(2,2,'DELETED'); -> 2번째부터 2개 지우고 DELETED 추가. 삭제된거 배열로 반환해줌.
   - sort(): array1.sort(); 모두 문자열로 변환후 UTF코드 값 비교. 그래서 숫자는 정확하지 않음. 100보다 34가 더 크게 나옴. 함수 만들어서 써줘야함. 이건 추후 학습
 
 ## 참조 타입과 동일성 테스트

@@ -174,7 +174,7 @@ h1 {
 - background-size로 이미지의 크기를 바꿀 수 있는데 cover, contain, auto 등을 넣어줄 수 있음.
 - contain은 비율을 유지하며 이미지 잘림 없이 꽉차게 표시됨. (잘림이 없기 때문에 이미지가 반복 될 수 있음.)
 - cover는 비율 유지하며 꽉차게 나타나지만 잘림 있음. cover 많이 씀.
-- backgroud-position으로 배경 시작점 지정해줄수 있음. bottom이면 사진 밑 부분 기준임.
+- background-position으로 배경 시작점 지정해줄수 있음. bottom이면 사진 밑 부분 기준임.
 - background-repeat: no-repeat; 으로 줘서 반복 안 나게도 가능함.
 - background: 속기법임 위에 것들 다 넣을 수 있음. 근데 여기서 background size 요소를 넣을라면 position/size 이런식으로 줘야됨. ex) center/cover
 - no-repeat 으로 주면 뒤에 배경 남을 수도 있는데 뒤에 색깔 넣어서 배경색 넣어 줄 수도 있음.

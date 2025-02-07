@@ -8,7 +8,7 @@
 
 - 문자열은 인덱싱되어있음. 0부터 셈.
 - let animal = "Dumbo Octopus"; animal[0];
-- animal[99] -> 이렇게 쓰면 undefinde 씀.
+- animal[99] -> 이렇게 쓰면 undefined 씀.
 - 보통은 문자열 첫 글자 확인 때 많이 씀.
 - length 라는 특성 있음. animal.length
 - "lol" + "lol" 문자열 접합.

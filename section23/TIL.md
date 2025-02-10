@@ -141,8 +141,6 @@ const { born: birthYear, died: deathYear = "N/A" } = user; // died란 변수로 
 
 ## 매개 변수 분해
 
--
-
 ```js
 // function fullName(user) {
 //     return `${user.firstName} ${user.lastName}`

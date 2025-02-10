@@ -135,7 +135,7 @@ firstbold.parentElement, parentElement; // 계속 하면 html나올거임.
 
 ## append & appendChild
 
-- appendChild: 마지막으 요소로 추가함.
+- appendChild: 마지막 요소로 추가함.
 - append: 한번에 한 개 이상을 삽입할 수 있게 해줘서 많은 요소나 노드 추가 가능
 - prepend: 앞에 추가함.
 

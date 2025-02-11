@@ -61,7 +61,7 @@ document.querySelector("h1").onclick = () => {
 - tasButton.onclick = twist; tasButton.onclick = shout; 이렇게 이어서 쓰면 onclick에 대한 함수가 shout로 덮어쓰여짐.
 - addEventListener는 덮여쓰여지지 않고 뒤에 추가됨.
 - 그리고 once 처럼 다양한 옵션이 들어갈 수 있음. tasButton.addEventListener("click", twist, {once:true}); 이러면 처음 클릭만 됨.
-- removeEventLitener로 이벤트 지울 수 있는데 강의에서는 안 다뤘음.
+- removeEventListener로 이벤트 지울 수 있는데 강의에서는 안 다뤘음.
 
 ```js
 const btn3 = document.querySelector("#v3");

@@ -7,7 +7,7 @@
 
 - body 태그에 모든 요소의 하나하나에 대한 고유의 Javascript 객체가 생성됨.
 - 트리 구조를 가짐. 트리 구조의 최상위에 있는 거는 document 객체
-- 콘솔에 document 치면 HTML형식으로 DOM 구조 나옴. console.log(document)라고 쳐야지 JavaScript 객체 형태로 프로퍼티가 열림. 이래야 객체의 모든 메서드/속성 탐색 가능하고 DOM 요소의 상세 값 확인 가능.
+- 콘솔에 document 치면 HTML형식으로 DOM 구조 나옴. console.dir(document)라고 쳐야지 JavaScript 객체 형태로 프로퍼티가 열림. 이래야 객체의 모든 메서드/속성 탐색 가능하고 DOM 요소의 상세 값 확인 가능.
 - body 태그들의 참조 같은거 확인 가능.
 - document.all 확인 하면 페이지의 모든 요소를 확인 할 수 있는데 document.all[10].innerText 이런 식으로 확인 가능하고 document.all[10].innerText = 'S'; 이런 식으로 변경도 가능
 - 연결된 시트처럼 눈에 보이지 않는 것도 변경 가능 -> meta 태그에 있음.
@@ -94,10 +94,6 @@ input.type = "password"; // 이런식으로도 변경가능
 - 브라우저에 의해 계산된 style을 확인하기 위해 window 객체의 getComputedStyle 메서드 사용함.
 - window.getComputedStyle(h1) 하면 많은 객체들이 나오는데 window.getComputedStyle(h1).color 이런 식으로 찾아볼 수 있음.
 
-```js
-
-```
-
 ## ClassList
 
 - 위 방법으로 style 변경 하는 것보다 클래스를 만들어서 적용하는 방법이 더 나음.
@@ -123,14 +119,14 @@ h2.classList.toggle("purple"); // purple 클래스를 껏다 킴.
 const firstBold = document.querySelector("b");
 
 firstbold.parentElement;
-firstbold.parentElement, parentElement; // 계속 하면 html나올거임.
+firstbold.parentElement.parentElement; // 계속 하면 html나올거임.
 ```
 
 - 부모는 하나지만 자식은 여러개일수 있음.
 - paragraph.childElementCount -> 자식 숫자 세줌.
 - paragraph.childeren 자식들 HTMLCollection으로 반환
 - 자식 요소 목록 상에 반복 걸려면 형제 요소 특성 알면 됨.
-- nextSibiling, previousSibiling: 노드를 보여줌. 아직 안배움.
+- nextSibiling, previousSibiling: 노드를 보여줌. 아직 안 배울 내용.
 - nextElementSibilng, previousElementSibling: 이게 다른 형제 요소로 넘어가게 해줌.
 
 ## append & appendChild

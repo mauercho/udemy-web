@@ -38,7 +38,7 @@
 - 문자열 안에 표현식을 내장할 수 있음.
 - 백틱 써야함. `hello ${1 + 2 + 9}` 하면 알아서 hello 12로 바꿔줌.
 - 달러사인과 중괄호 쓴 부분 평가해줌. 따옴표들 대신 백틱으로 써줘도 문자열임.
-- 변수 써줘도 됨. ${product}. 메서드 호출도 가능 ${product.toUpperCase()}
+- 변수 써줘도 됨. \${product}. 메서드 호출도 가능 ${product.toUpperCase()}
 
 ## Undefinde 와 NULL
 

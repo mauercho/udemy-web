@@ -11,7 +11,7 @@
 - 브라우저가 작업함. 브라우저는 대부분 C++ 같은 언어로 작성되어서 JavaScript가 할 수 없는 것들을 함.
 - JavaScript는 브라우저가 특정 작업을 처리하도록 넘길거임. -> Web API
 - JavaScript 콜 스택이 WEB API 함수를 인식하고 브라우저에 전달함. setTimeout 같은 경우 특정 시간이 지나면 (브라우저가 작업 마치면) 다시 콜스택에 추가됨. JavaScript는 다시 이어받아서 코드 실행.
-- 하나는 JavaScript가 실행하는 것이고 다른 하나는 나중에 실행되는 함수를 전달하는 콜백 개녕. 이 두가지 메커니즘으로 작동함.
+- 하나는 JavaScript가 실행하는 것이고 다른 하나는 나중에 실행되는 함수를 전달하는 콜백 개념. 이 두가지 메커니즘으로 작동함.
 
 ## Callback이라는 지옥
 
@@ -171,6 +171,7 @@ fakeRequestPromise("yelp.com/api/coffee/page1")
 - Promise는 .then 안에서 자신에게 Promise를 반환할 수 있음.
 - 아래 예시에 나와 있음. 더 보기 깔끔함. 어디선가 에러 뜨면 그냥 catch
 - promise는 전달 받은 값으로 resolve 또는 reject됨.
+- resolve 자체가 문자열 꼴을 반환한다" 라고 이해하기보다는, "resolve에 전달된 값이 Promise의 결과로 반환됨. 이렇게 이해하면 좋음. reject도 마찬가지
 
 ```js
 fakeRequestPromise("yelp.com/api/coffee/page1")

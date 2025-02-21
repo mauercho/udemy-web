@@ -83,6 +83,12 @@ function Color(r, g, b) {
 - 생성자 함수는 new 키워드로 호출되며 내부적으로 this를 이용해 객체 생성
 
 ```js
+function Color(r, g, b) {
+  this.r = r;
+  this.g = g;
+  this.b = b;
+}
+
 Color.prototype.rgb = function () {
   const { r, g, b } = this;
   return `rgb(${r}, ${g}, ${b})`;
@@ -188,7 +194,7 @@ const white = new Color(255, 255, 255, "white");
 - hsl => 색조 (0~360), 채도(%), 명도(%) 순
 - constructor 잘 이용하여 h, s, l 만든거 확인
 
-## 확장 및 슈퍼 키워드 extend super
+## 확장 및 슈퍼 키워드 extends super
 
 ```js
 class Pet {

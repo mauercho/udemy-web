@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 ## 뷰 디렉토리 설정하기.
 
 - 지금은 위치가 views 폴더가 있는 디렉토리와 동일한 곳에서 열었을 때만 작동함.
-- 상위 포러로 가면 액세스는 가능한데 views의 home.ejs를 참고할 수 없음.
+- 상위 폴더로 가면 액세스는 가능한데 views의 home.ejs를 참고할 수 없음.
 - 내장된 모듈 path 써서 해결
 - app.set("views", path.join(\_\_dirname, "/views")); index.js라는 파일이 있는 현재 디렉토리를 가져와서 거기에 views를 붙여주는 거임.
 - 이제 다른 폴더에서 nodemon index.js 하면 됨,

@@ -153,7 +153,7 @@ function colorize() {
 - 이벤트 객체라는 거는 콜백함수에 자동적으로 전달됨.
 - 종종 이벤트 객체 필요함. ex) 어떤 키가 눌러졌는지 알아내야함.
 - code랑 key는 다름. 모두 입력된 키보드 값을 담고 있음. code가 위치기반임. ex) a 누르면 key로는 소문자 a 나오고 code 는 keyA 나옴. 다른 언어 써도 code 는 keyA 나올거임. key는 나오는 문자라고 생각하면됨.
-- window.addEventLitener로 페이지의 어느 곳에서든 Event들을 수 있게 할 수 있음. keydown 넣으면 모든 버튼 입력마다 콜백함수 실행될거임.
+- window.addEventListener로 페이지의 어느 곳에서든 Event들을 수 있게 할 수 있음. keydown 넣으면 모든 버튼 입력마다 콜백함수 실행될거임.
 
 ```js
 document.querySelector("button").addEventListener("click", function (evt) {
@@ -189,7 +189,7 @@ window.addEventListener("keydown", function (e) {
 ## 폼 이벤트 및 preventDefault
 
 - preventDefault는 특정 이벤트의 기본 동작이 수행되지 않도록 막아줌.
-- 폼 제출 이벤트만을 위한게 아니지마 90%는 폼 제출 이벤트 할 때 쓰임.
+- 폼 제출 이벤트만을 위한게 아니지만 90%는 폼 제출 이벤트 할 때 쓰임.
 
 ```html
 <form action="/dogs" id="tweetForm">
@@ -344,6 +344,6 @@ for (let li of lis) {
 ```js
 const tweetsContainer = document.querySelector("#tweets");
 tweetsContainer.addEventListener("click", function (e) {
-  e.target.nodeName === "LI" && e.target.remove(); // li인지 확인하고 li면 지우는거 확인가능. 그래서
+  e.target.nodeName === "LI" && e.target.remove(); // li인지 확인하고 li면 지우는거 확인가능.
 });
 ```

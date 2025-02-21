@@ -40,7 +40,7 @@
 - 달러사인과 중괄호 쓴 부분 평가해줌. 따옴표들 대신 백틱으로 써줘도 문자열임.
 - 변수 써줘도 됨. \${product}. 메서드 호출도 가능 ${product.toUpperCase()}
 
-## Undefinde 와 NULL
+## Undefined 와 NULL
 
 - JavaScript의 실제 값
 - null은 일부로 값을 지정하지 않는 걸로 설정하는 거. false 나 0으로 또는 빈 문자열로 설정할 수 있지만 null로 설정하면 명시적으로 값이 없다고 알려주는 거임.

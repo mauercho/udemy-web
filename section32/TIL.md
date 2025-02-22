@@ -92,7 +92,7 @@ jokes.getRandomDadJoke(function (joke) {
 
 - node_modules에는 설치한 모든 패키지가 있고 직접 설치하지 않은 디펜던시도 있음.
 - package.json은 특별한 이름을 지닌 파일로 모든 노드 앱에 들어감. 보통 프로젝트의 루트 디렉토리에 넣음.
-- description, license, veersion, dependencies 등등 써있음.
+- description, license, version, dependencies 등등 써있음.
 - npm이 여기 써있는 dependencies를 다 다운받을거임.
 - npm init -> packages.json 직접 생성. 그리고 Npm install 하면 dependencies에 그거 들어가 있음.
 - 착수 중인 작업에 대한 기록 남길 수 있고 다른 기기에서 내 자신이 파일 공유할 때 디펜던시를 한번에 다운로드할 수 있음.

@@ -1,14 +1,14 @@
 ## 데이터베이스
 
 - 정보를 저장해서 지속시킬 방법이 필요함. 이게 데이터베이스의 역할
-- 뿐만 아니라 많은 데이터를 효율적으로 저장하고 압출하여 관리하기 쉽고 접속하기 쉽게 만들어줌.
+- 뿐만 아니라 많은 데이터를 효율적으로 저장하고 압축하여 관리하기 쉽고 접속하기 쉽게 만들어줌.
 - 데이터베이스관리 시스템이라고 보안 기능이나 관리자로서의 접속을 누구에게 허용할지 제어하는 기능이 있음.
 
 ## SQL 데이터베이스, NOSQL 데이터베이스
 
 - SQL 데이터베이스: mysql, postgres, sqlite, oracle, microsoft SQL Server 등
 
-  - 구조화된 쿼리언어, 즉 관계형 데이트베이스임. SQL에서 하는 모든 일이 테이블에서 이루어짐
+  - 구조화된 쿼리언어, 즉 관계형 데이터베이스임. SQL에서 하는 모든 일이 테이블에서 이루어짐
   - 스키마와 테이블을 세팅한 후에야 데이터베이스에 뭔가 추가할 수 있음.
 
 - NOSQL 데이터베이스: MongoDB, Redis, Couch DB, Neo4j, Cassandra 등
@@ -97,4 +97,4 @@
 - `db.dogs.find({breed: {$in: ['Mutt', 'Corgi']}, age: {$gt: 8}})` 이렇게 여러 조건을 넣어줄수도 있음.
 - `$ne` 는 not equals 다른거 찾기.
 - `$nin` not in 해당 되지 않는 조건들 찾기.
-- `db.dogs.find({$or: [{'personality.catFriendly': true}, {age: ${lte: 2}}]})` catFriendly가 true 거나 age가 2세 이상인 것들을 뽑아줌. 당연히 `$and`도 쓸 수 있음.
+- `db.dogs.find({$or: [{'personality.catFriendly': true}, {age: {$lte: 2}}]})` catFriendly가 true 거나 age가 2세 이상인 것들을 뽑아줌. 당연히 `$and`도 쓸 수 있음.

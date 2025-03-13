@@ -1,13 +1,13 @@
 ## 템플레이팅이란
 
 - 검색했을때 검색결과 부분만 다르고 패턴은 같은 것을 확인할 수 있음.
-- 템플릿을 사용한거임. 최종 적으로 로직과 HTML 응답 생성을 결합하는 것이 목표
+- 템플릿을 사용한거임. 최종적으로 로직과 HTML 응답 생성을 결합하는 것이 목표
 - 쓸 도구들 많음. -> EJS Handlebars Nunjucks Pug 등. EJS 쓸거임.(javascript문법 비슷하게 씀)
 
 ## EJS용 Express 구성하기
 
 - 템플레이팅 엔진은 여러개이기 때문에 express 에게 ejs 쓴다고 알려줘야함. app.set('view engine', 'ejs'); -> view engine ejs로 써라.
-- npm i ejs 하면 Expresse이면에서 우리가 설치한 EJS 패키지를 불러올거임.
+- npm i ejs 하면 Express이면에서 우리가 설치한 EJS 패키지를 불러올거임.
 - view engine을 사용할 때 express는 views나 템플릿이 views 디렉토리 안에 있다고 가정함.
 - 그동안 문자열 보내왔는데(send) render로 파일 템플릿 보낼 수 있음. -> render
 

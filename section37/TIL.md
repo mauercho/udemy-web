@@ -52,7 +52,7 @@ mongoose
 
   ```js
   const amadeus = new Movie({
-    titel: "Amadeus",
+    title: "Amadeus",
     year: 1986,
     score: 9.2,
     rating: "R",
@@ -111,7 +111,7 @@ Movie.insertMany([
 - Movie.find({rating: 'PG-13'}).then(data => console.log(data))
   ![alt text](image-6.png)
   ![alt text](image-7.png)
-- findOne도 똑같음/ 하나만 찾음. 근데 find 처럼 배열이 아니라 객체로 나옴.
+- findOne도 똑같음. 하나만 찾음. 근데 find 처럼 배열이 아니라 객체로 나옴.
 - find 콜백함수의 첫번째 매개변수는 오류고 두번째 매개변수는 우리가 얻는 데이터임.
 - findById는 Id로 찾아줌.
   ![alt text](image-8.png)
@@ -344,14 +344,17 @@ const findProduct = async () => {
 
 - 모델 자체에 적용되는 정적 메서드. 인스턴스 메서드에서 this는 개별 인스턴스를 가리켰음.
 - 정적 메서드의 this는 모델 클래스 자체를 가리킴.
-- 좀 더 편하고 유용한 방식으로 찾기나 업데이트, 제거하기 같은 작업을 하는 거라서 클래스나 모델 자체에 커스텀 적용을 하고 메서드를 추가하곤 합니다.
+- 좀 더 편하고 유용한 방식으로 찾기나 업데이트, 제거하기 같은 작업을 하는 거라서 클래스나 모델 자체에 커스텀 적용을 하고 메서드를 추가하곤 함.
 
 ```js
 const Product = mongoose.model("Product", productSchema);
+
+// 방법 1
 productSchema.statics.fireSale = function () {
   return this.updateMany({}, { onSale: true, price: 0 });
 };
 
+// 방법2
 productSchema.static("fireSale", function (breed) {
   return this.find({ breed });
 });
